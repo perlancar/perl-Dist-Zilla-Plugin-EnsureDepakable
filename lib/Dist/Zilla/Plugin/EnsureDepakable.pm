@@ -54,4 +54,4 @@ if distribution is determined to be not depakable.
 
 L<App::depak>
 
-L<Module::Depakable>
+L<Module::Depakable>, L<depakable>
