@@ -47,7 +47,7 @@ This plugin will check that the distribution is "depakable", i.e. all the
 modules in the distribution can be packed in a script using fatpack or datapack
 technique. To do this, the plugin will feed all the distribution's
 RuntimeRequires prerequisites to L<Module::Depakable>. The build will be aborted
-if distribution is not depakable.
+if distribution is determined to be not depakable.
 
 
 =head1 SEE ALSO
