@@ -1,5 +1,14 @@
 Revision history for Dist-Zilla-Plugin-EnsureDepakable
 
+0.002   2016-05-19 (PERLANCAR)
+
+	- No functional changes.
+
+	- [doc] Tweak description.
+
+	- [doc] Mention 'depakable' script.
+
+
 0.001   2016-05-18 (PERLANCAR)
 
         - First release.
