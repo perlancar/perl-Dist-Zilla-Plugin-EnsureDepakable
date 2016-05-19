@@ -30,7 +30,7 @@ sub setup_installer {
 
 __PACKAGE__->meta->make_immutable;
 1;
-# ABSTRACT: Make sure that distribution is depakable
+# ABSTRACT: Make sure that distribution is "depakable"
 
 =for Pod::Coverage .+
 
@@ -43,11 +43,12 @@ In F<dist.ini>:
 
 =head1 DESCRIPTION
 
-This plugin will check that the distribution is "depakable", i.e. all the
-modules in the distribution can be packed in a script using fatpack or datapack
-technique. To do this, the plugin will feed all the distribution's
-RuntimeRequires prerequisites to L<Module::Depakable>. The build will be aborted
-if distribution is determined to be not depakable.
+This plugin helps make sure that you do not add a (direct, or indirect)
+dependency to a non-core XS module, so that all your distribution's modules can
+be use-d by a script that wants to be packed so it can be run with only
+requiring core perl modules.
+
+See L<Module::Depakable> for more details on the meaning of "depakable".
 
 
 =head1 SEE ALSO
@@ -55,3 +56,5 @@ if distribution is determined to be not depakable.
 L<App::depak>
 
 L<Module::Depakable>, L<depakable>
+
+L<Dist::Zilla::Plugin::Depak>
