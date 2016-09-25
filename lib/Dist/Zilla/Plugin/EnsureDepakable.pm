@@ -21,8 +21,9 @@ sub setup_installer {
 
     return unless keys %$rr_prereqs;
 
-    my $res = Module::Depakable::prereq_depakable(
-        prereqs => [grep { $_ ne 'perl' } keys %$rr_prereqs]);
+    my $prereqs = [grep { $_ ne 'perl' } keys %$rr_prereqs];
+    $self->log_debug(["Checking whether prereqs are depakable: %s", $prereqs]);
+    my $res = Module::Depakable::prereq_depakable(prereqs => $prereqs);
     if ($res->[0] != 200) {
         $self->log_fatal(["Distribution not depakable: %s", $res->[1]]);
     }
