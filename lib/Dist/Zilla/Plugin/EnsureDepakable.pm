@@ -16,6 +16,12 @@ use namespace::autoclean;
 sub setup_installer {
     my ($self) = @_;
 
+    if ($ENV{DZIL_ENSUREDEPAKABLE_SKIP}) {
+        $self->log(["Skipping checking depakable because ".
+                        "environment DZIL_ENSUREDEPAKABLE_SKIP is set to true"]);
+        return;
+    }
+
     my $prereqs_hash = $self->zilla->prereqs->as_string_hash;
     my $rr_prereqs = $prereqs_hash->{runtime}{requires} // {};
 
@@ -50,6 +56,13 @@ be use-d by a script that wants to be packed so it can be run with only
 requiring core perl modules.
 
 See L<Module::Depakable> for more details on the meaning of "depakable".
+
+
+=head1 ENVIRONMENT
+
+=head2 DZIL_ENSUREDEPAKABLE_SKIP => bool
+
+Can be set to 1 to skip checking depakable.
 
 
 =head1 SEE ALSO
