@@ -8,7 +8,7 @@ use strict;
 use warnings;
 
 use Moose;
-with 'Dist::Zilla::Role::InstallTool';
+with 'Dist::Zilla::Role::AfterBuild';
 
 use Module::Depakable;
 use namespace::autoclean;
