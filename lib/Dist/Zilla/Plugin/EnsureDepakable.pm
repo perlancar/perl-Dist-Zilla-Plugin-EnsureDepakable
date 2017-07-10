@@ -13,7 +13,7 @@ with 'Dist::Zilla::Role::AfterBuild';
 use Module::Depakable;
 use namespace::autoclean;
 
-sub setup_installer {
+sub after_build {
     my ($self) = @_;
 
     if ($ENV{DZIL_ENSUREDEPAKABLE_SKIP}) {
