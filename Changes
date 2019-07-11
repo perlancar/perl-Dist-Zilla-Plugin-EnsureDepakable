@@ -1,15 +1,15 @@
-0.004   2017-07-10 (PERLANCAR)
+0.004   2017-07-10  Released-By: PERLANCAR
 
 	- Switch from (ab)using InstallTool phase to using AfterBuild phase
 	  to do our stuffs, to be compatible with DZP:StaticInstall.
 
 
-0.003   2016-10-22 (PERLANCAR)
+0.003   2016-10-22  Released-By: PERLANCAR
 
 	- Observe DZIL_ENSUREDEPAKABLE_SKIP to allow skipping via env.
 
 
-0.002   2016-05-19 (PERLANCAR)
+0.002   2016-05-19  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -18,6 +18,6 @@
 	- [doc] Mention 'depakable' script.
 
 
-0.001   2016-05-18 (PERLANCAR)
+0.001   2016-05-18  Released-By: PERLANCAR
 
         - First release.
